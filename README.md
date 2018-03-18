@@ -1,30 +1,30 @@
 # BASH practice
 
 
-ヒアドキュメント展開無し
-dirname="/home/aaa"
-cat << 'END'
-command .....
-usage:.....
-$dirname
-END
+## ヒアドキュメント展開無し
+`dirname="/home/aaa"`  
+`cat << 'END'`  
+`command .....`  
+`usage:.....`  
+`$dirname`  
+`END`  
 
-[output]
-command .....
-usage:.....
-$dirname
+`[output]`  
+`command .....`  
+`usage:.....`  
+`$dirname`  
 
 
 ヒアドキュメント展開有り
-dirname="/home/aaa"
-cat << END
-command .....
-usage:.....
-$dirname
-END
+`dirname="/home/aaa"`  
+`cat << END`  
+`command .....`  
+`usage:.....`  
+`$dirname`  
+`END`  
 
-[output]
-command .....
-usage:.....
-/home/aaa
+`[output]`  
+`command .....`  
+`usage:.....`  
+`/home/aaa`  
 
