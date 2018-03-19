@@ -1,7 +1,7 @@
 # BASH practice
 
 
-## ヒアドキュメント展開無し
+#### ヒアドキュメント展開無し
 `dirname="/home/aaa"`  
 `cat << 'END'`  
 `command .....`  
@@ -15,7 +15,7 @@
 `$dirname`  
 
 
-ヒアドキュメント展開有り
+#### ヒアドキュメント展開有り
 `dirname="/home/aaa"`  
 `cat << END`  
 `command .....`  
