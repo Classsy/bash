@@ -33,3 +33,6 @@ set -u # 未定義変数を参照時エラー
 set -e # コマンド終了ステータス0以外であったら即終了  
 set -x # コマンドを展開した後の内容を表示  
 set -v # 実行前にコマンドラインの内容表示  
+
+#### logging(/var/log/messages)
+logger -t TEST "test messages" #これは/var/log/messagesに出力可能 -t でタグ付けしてgrepすればOK
