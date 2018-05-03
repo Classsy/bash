@@ -36,3 +36,21 @@ set -v # 実行前にコマンドラインの内容表示
 
 #### logging(/var/log/messages)
 logger -t TEST "test messages" #これは/var/log/messagesに出力可能 -t でタグ付けしてgrepすればOK
+
+#### 関数の戻り値
+returnで何か呼び出し元に渡すには、returnはできない。
+
+`function hoge () {`  
+`  hoge=HOGE`  
+`  return $hoge <= return `  
+`}`  
+`$foo=$(hoge) <= hoge関数の戻り値を取り出せないはず。`  
+
+修正版
+returnで何か呼び出し元に渡すには、echoにした方がいい。
+
+`function hoge () {`  
+`  hoge=HOGE`  
+`  echo $hoge <= echo `  
+`}`  
+`$foo=$(hoge) <= hoge関数の戻り値を取り出せる。`  
