@@ -65,3 +65,11 @@ returnで何か呼び出し元に渡すには、echoにした方がいい。
 ちなみにリモートサーバ上のスクリプトを実行する方法
 
 `ssh hoge.example.com 'bash < SCRIPT_NAME'`  
+
+#### selectによるメニュー表示
+ファイルに1行ごとに記載があれば以下のでOK  
+arr=(`cat file`)  
+select VAR in "${arr[@]}"  
+do  
+    echo "$VAR"  
+done  
